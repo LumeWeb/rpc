@@ -1,0 +1,11 @@
+{
+    "name": "@lumeweb/rpc",
+    "type": "module",
+    "version": "0.1.0",
+    "dependencies": {
+        "protomux-rpc": "^1.3.0"
+    },
+    "devDependencies": {
+        "@types/b4a": "^1.6.0"
+    }
+}
