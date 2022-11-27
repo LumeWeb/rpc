@@ -9,9 +9,16 @@ export default class RPC extends ProtomuxRPC {
         options = {
             ...{
                 id: ID,
-                valueEncoding: c.json
-            }, ...options
+                valueEncoding: c.json,
+            },
+            ...options,
         };
         super(stream, options);
+    }
+    async request(method, value = b4a.from(""), options = {}) {
+        if (!b4a.isBuffer(value)) {
+            value = b4a.from(value);
+        }
+        return super.request(method, value, options);
     }
 }
