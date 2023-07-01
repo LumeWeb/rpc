@@ -1,4 +1,3 @@
-// @ts-ignore
 import ProtomuxRPC from "protomux-rpc";
 // @ts-ignore
 import c from "compact-encoding";
