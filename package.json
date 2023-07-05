@@ -9,7 +9,7 @@
     },
     "dependencies": {
         "compact-encoding": "2.12.0",
-        "protomux-rpc": "1.4.0"
+        "protomux-rpc": "1.4.1"
     },
     "devDependencies": {
         "@lumeweb/node-library-preset": "^0.2.7",
