@@ -37,6 +37,8 @@ export default class RPC extends ProtomuxRPC {
         stream.off("destroy", ondestroy);
       }
     });
+
+    stream.setKeepAlive(5000);
   }
 
   async request(method: any, value: any | string = "", options = {}) {
