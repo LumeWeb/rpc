@@ -1,12 +1,12 @@
 {
     "name": "@lumeweb/rpc",
-    "version": "0.0.2-develop.3",
+    "version": "0.0.2-develop.4",
     "lockfileVersion": 3,
     "requires": true,
     "packages": {
         "": {
             "name": "@lumeweb/rpc",
-            "version": "0.0.2-develop.3",
+            "version": "0.0.2-develop.4",
             "dependencies": {
                 "compact-encoding": "2.12.0",
                 "protomux-rpc": "1.4.1"
