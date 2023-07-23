@@ -17,9 +17,25 @@ export default class RPC extends ProtomuxRPC {
       ...options,
     };
     super(stream, options);
-    this._ready = new Promise((resolve) => {
-      // @ts-ignore
-      this.on("open", resolve);
+
+    this._ready = new Promise((resolve, reject) => {
+      stream.on("open", onopen);
+      stream.on("destroy", ondestroy);
+
+      function onopen(handshake) {
+        removeListener();
+        resolve(handshake);
+      }
+
+      function ondestroy() {
+        removeListener();
+        reject(new Error("Client could not connect"));
+      }
+
+      function removeListener() {
+        stream.off("open", onopen);
+        stream.off("destroy", ondestroy);
+      }
     });
   }
 
